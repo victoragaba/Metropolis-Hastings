@@ -37,3 +37,5 @@ At a high level, we consider the following:
    Empirically, we see that it does.
 
 The algorithm's implementation and output is in the python script MetropolisHastings.py, along with a sample text to decrypt.
+
+**Note:** Since this is a stochastic algorithm, it does not always produce the desired output. Running it a few times should do the trick in that case.
