@@ -36,4 +36,4 @@ At a high level, we consider the following:
    that gives the target function (decoding to English itself) the highest plausibility score, or something close to the highest.
    Empirically, we see that it does.
 
-The algorithm's implementation and output is in the Jupyter notebook MetropolisHastings.ipynb.
+The algorithm's implementation and output is in the python script MetropolisHastings, along with a sample text to decrypt.
