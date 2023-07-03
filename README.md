@@ -22,7 +22,7 @@ At a high level, we consider the following:
    adjacent pair of letters is to exist in English, compared to every other pair in the message). Jane Austen's books are used as the
    reference texts.
   
-4. Given any function $f$, we have two options for where to go next: we either stay at the current function we go to a new function $f^\*$
+4. Given any function $f$, we have two options for where to go next: we either stay at the current function or go to a new function $f^\*$
    suggested by an arbitrary stochastic matrix $\mathbf{Q}$. In this case, the matrix randomly suggests $f^\*$ to be the same as $f$,
    except that two characters in the permutation that $f$ corresponds to are switched at random.
 
