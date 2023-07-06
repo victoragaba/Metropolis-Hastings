@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 import random
 import copy
 from scipy.stats import uniform
@@ -28,9 +28,9 @@ def MCMC(code: str, reference: str) -> str:
     def alpha(f, f_star):
         f_star_array = apply(f_star)
         f_array = apply(f)
-        M_f_star = [numpy.log(M[i][f_star_array[ind+1]]) for ind, i in enumerate(f_star_array) if ind < len(f_star_array)-1]
-        M_f = [numpy.log(M[i][f_array[ind+1]]) for ind, i in enumerate(f_array) if ind < len(f_array)-1]
-        return numpy.exp(min(sum(M_f_star) - sum(M_f), 0))
+        M_f_star = [np.log(M[i][f_star_array[ind+1]]) for ind, i in enumerate(f_star_array) if ind < len(f_star_array)-1]
+        M_f = [np.log(M[i][f_array[ind+1]]) for ind, i in enumerate(f_array) if ind < len(f_array)-1]
+        return np.exp(min(sum(M_f_star) - sum(M_f), 0))
 
     def accept(alpha): return uniform.rvs(loc=0, scale=1) < alpha
     def decrypt(f): return "".join([num2char(n) for n in apply(f)])
