@@ -1,5 +1,4 @@
 import numpy as np
-import random
 import copy
 from scipy.stats import uniform
 
@@ -16,8 +15,8 @@ def MCMC(code: str, reference: str) -> str:
     M = [[int(n) + 1 for n in row] for row in M_string] # shifted by 1
 
     def switch_randomly(f):
-        a = random.randint(0, len(f)-1)
-        b = random.randint(0, len(f)-1)
+        a = np.random.randint(0, len(f)-1)
+        b = np.random.randint(0, len(f)-1)
         f_star = copy.deepcopy(f)
         f_star[a] = f[b]
         f_star[b] = f[a]
